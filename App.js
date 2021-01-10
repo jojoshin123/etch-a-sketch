@@ -10,6 +10,7 @@ for (let i = 0; i < gridNum * gridNum; i++) {
 }
 
 let togglePen = false;
+let colorVar = "black";
 
 const cells = document.querySelectorAll(".cell");
 
@@ -30,7 +31,22 @@ cells.forEach((cell) => {
 
     cell.addEventListener("mousemove", () => {
         if (togglePen) {
-            cell.style.cssText = "background-color: black;";
+            cell.style.cssText = `background-color: ${colorVar}`;
         } else return;
+    });
+});
+
+const clearButton = document.querySelector(".clear");
+clearButton.addEventListener('click', () => {
+    cells.forEach((cell) => {
+        cell.style.cssText = "background-color: rgb(230, 230, 230);";
+    });
+});
+
+const colors = document.querySelectorAll(".colors");
+colors.forEach((color) => {
+    color.style.cssText = `background-color: ${color.id}`;
+    color.addEventListener('click', () => {
+        colorVar = color.id;
     });
 });

@@ -21,9 +21,31 @@ body {
     cursor: crosshair;
 }
 
+.clear {
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(64, 9px [col-start]);
     grid-template-rows: repeat(64, 9px [row-start]);
     justify-content: center;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(3, 30px [col-start]);
+    grid-template-rows: repeat(3, 30px [row-start]);
+}
+
+.colors {
+    margin: 2px;
+    border: 2px solid black;
+}
+
+.colors:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.5s;
 }
