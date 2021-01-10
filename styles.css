@@ -1,5 +1,20 @@
 body {
     background-color: rgb(255, 100, 100);
+    font-family: sans-serif;
+    color: rgb(65, 0, 0);
+}
+
+.page {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.togglePen {
+    color: red;
+    background-color: rgb(230, 230, 230);
+    text-align: center;
 }
 
 .divCrosshairs {
@@ -8,7 +23,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(32, 20px [col-start]);
-    grid-template-rows: repeat(32, 20px [row-start]);
+    grid-template-columns: repeat(64, 9px [col-start]);
+    grid-template-rows: repeat(64, 9px [row-start]);
     justify-content: center;
 }

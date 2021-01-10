@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 
 // Populate gridNum * gridNum grid
-let gridNum = 32
+let gridNum = 64;
 for (let i = 0; i < gridNum * gridNum; i++) {
     const div = document.createElement('div');
     div.style.cssText = "background-color: rgb(230, 230, 230);";
@@ -17,6 +17,15 @@ cells.forEach((cell) => {
     cell.addEventListener("click", () => {
         togglePen = !togglePen;
         container.classList.toggle("divCrosshairs");
+        const penToggled = document.querySelector(".togglePen");
+        if (togglePen) {
+            penToggled.style.color = "green";
+            penToggled.textContent = "Enabled";
+        } else {
+            penToggled.style.color = "red";
+            penToggled.textContent = "Disabled";
+        }
+
     });
 
     cell.addEventListener("mousemove", () => {
