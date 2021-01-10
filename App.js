@@ -9,12 +9,19 @@ for (let i = 0; i < gridNum * gridNum; i++) {
     container.appendChild(div);
 }
 
+let togglePen = false;
 
 const cells = document.querySelectorAll(".cell");
 
 cells.forEach((cell) => {
+    cell.addEventListener("click", () => {
+        togglePen = !togglePen;
+        container.classList.toggle("divCrosshairs");
+    });
+
     cell.addEventListener("mousemove", () => {
-        cell.style.cssText = "background-color: black;";
-        console.log("poopman");
+        if (togglePen) {
+            cell.style.cssText = "background-color: black;";
+        } else return;
     });
 });

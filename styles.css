@@ -2,6 +2,10 @@ body {
     background-color: rgb(255, 100, 100);
 }
 
+.divCrosshairs {
+    cursor: crosshair;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(32, 20px [col-start]);
