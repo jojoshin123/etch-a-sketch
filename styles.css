@@ -28,8 +28,6 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(64, 9px [col-start]);
-    grid-template-rows: repeat(64, 9px [row-start]);
     justify-content: center;
 }
 
