@@ -29,12 +29,18 @@ body {
 .container {
     display: grid;
     justify-content: center;
+    border: 3px solid black;
 }
 
 .color-palette {
     display: grid;
     grid-template-columns: repeat(3, 30px [col-start]);
     grid-template-rows: repeat(3, 30px [row-start]);
+}
+
+.selected-color {
+    width: 110%;
+    height: auto;
 }
 
 .colors {
@@ -45,5 +51,9 @@ body {
 .colors:hover {
     transform: scale(1.1);
     cursor: pointer;
-    transition: all 0.5s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

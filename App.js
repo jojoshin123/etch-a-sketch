@@ -47,7 +47,6 @@ let togglePen = false;
 let colorVar = "black";
 
 
-
 function assignCellListeners() {
     const cells = document.querySelectorAll(".cell");
     cells.forEach((cell) => {
